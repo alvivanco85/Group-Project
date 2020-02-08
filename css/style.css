@@ -4,8 +4,17 @@
   margin-right: auto;
   padding-top: 50px;
 }
+.uk-search {
+  font-size: 38px;
+}
+.uk-search-input {
+  width: 600px;
+}
+.uk-search-input::before {
+  icon: search;
+  ratio: 2;
+}
+
 .uk-button-primary {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 60px;
 }
