@@ -1,5 +1,5 @@
 # Group-Project
-An application that will help you find songs by humming, lyrics or sound clips.
+An application that will help you find songs by humming, typing lyrics or playing back sound clips.
 
 ## User Story
 As avid music listeners 
