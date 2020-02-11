@@ -1,12 +1,4 @@
-  
-#logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 50px;
-  }
-  .uk-button-primary {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+html {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRP0JUcgRRrTBSlmL3F117PkDdoFBTw4Wq3a9WC5foo8APl16Ex");
+  background-repeat: repeat-y repeat-x;
+}
