@@ -4,7 +4,11 @@ An application that will help you find songs by humming, typing lyrics or playin
 ## User Story
 As avid music listeners 
 we want to be able to find song titles when we cannot name them
+<<<<<<< HEAD
 so that we can import to a Spotify playlist.
+=======
+so that we can import to a Spotify playlist. 
+>>>>>>> b108fbbae892e3d8f4844e8426ca88fb3890c5c0
 
 ```
 GIVEN that a person hears a song, but knows nothing about said song
@@ -13,3 +17,7 @@ WHEN the person hums the song or plays it back
 
 THEN the website will return information abou the song
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> b108fbbae892e3d8f4844e8426ca88fb3890c5c0

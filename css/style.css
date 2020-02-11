@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #logo {
   display: block;
   margin-left: auto;
@@ -25,3 +26,17 @@
   margin-right: auto;
 >>>>>>> master
 }
+=======
+  
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+  }
+  .uk-button-primary {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+>>>>>>> b108fbbae892e3d8f4844e8426ca88fb3890c5c0
