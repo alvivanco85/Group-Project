@@ -8,13 +8,14 @@ html {
 }
 
 #results, #songTitle, #albumCover, #lyrics {
-  //display: hide;
+  display: none;
 }
 
 .results {
   background-color: #55b8bb;
   margin-bottom: 5px;
   color: white;
+  display: none;
 }
 
 .results:hover {
