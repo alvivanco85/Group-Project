@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-git.min.js"></script>
   </head>
   <body>
     <nav class="level">
     <div class="level-item has-text-centered">
       <div>
-        <img src="muselogo2.png" width="200" height="200" alt="muse logo" id="logo">
+        <img name="museBtn" src="muselogo2.png" width="200" height="200" alt="muse logo" id="logo">
       </div>
     </div>
   </nav>
-
   <nav class="level">
     <div class="level-item">
       <div class="field">
@@ -29,22 +29,33 @@
       </div>
     </div>
   </nav>
-
   <nav class="level">
     <div class="level-item">
       <div class="buttons">
-        <button class="button is-primary">Search</button>
+        <button class="button is-primary" id="searchBtn">Search</button>
       </div>
     </div>
   </nav>
+
+  <nav class="container">
+    <div class="tile is-ancestor hide">
+    <div class="tile is-4 is-vertical is-parent hide">
+      <div class="tile is-child box hide" id="songTitle">
+        <p class="title">Song, Artist, Album</p>
+        <p>Song Title, Artist and Album Name</p>
+      </div>
+      <div class="tile is-child box hide" id="albumCover">
+        <p class="title">Album Cover</p>
+        <p>Image will go</p>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <div class="tile is-child box hide" id="lyrics" style="white-space: pre-line">
+        <p class="title">Lyrics</p>
+      </div>
+    </div>
+  </div>
+  </nav>
+  <Script src="script.js"> </Script>
   </body>
 </html>
-<!--
-      <img src="https://place-hold.it/200x200" alt="muse logo" id="logo">
-      <div class="">
-        <form class="">
-            <input class="" type="search" placeholder="Search for lyrics, songs, artist...">
-            <button type="button">SEARCH</button>
-        </form>
-
--->
