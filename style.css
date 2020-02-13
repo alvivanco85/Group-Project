@@ -8,5 +8,11 @@ html {
 }
 
 #results, #songTitle, #albumCover, #lyrics {
-  display: show;
+  //display: hide;
+}
+
+.results {
+  background-color: cadetblue;
+  margin-bottom: 5px;
+  color: white;
 }
