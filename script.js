@@ -29,11 +29,17 @@ $("#logo").on("click", function () {
 });
 
 function search() {
-  // LOADING GIF WHILE SEARCHING
+  // Put loading gif to search bar while waiting to load
   $("#search-icon").html('<i class="fas fa-spinner fa-spin"></i>');
-  // SEARCH INPUT BY USER
   var searchInput = $("#search-input").val();
-  // GET RESULTS WITH API
+  // Validate search input
+  if (!searchInput) {
+    alert("Search input cannot be empty");
+    // Remove loading igf
+    $("#search-icon").html('<i class="fas fa-search"></i>');
+    return
+  }
+  // Get results from API
   var queryURL = "https://api.audd.io/findLyrics/?q=" + searchInput + "&api_token=aac442290d3b6228e5387dc8352ecb4e";
 
   $.ajax({
@@ -42,14 +48,15 @@ function search() {
   }).then(function(respond) {
     $("#results").show();
     console.log(respond);
-    // CLEAR RESULTS
+    // Clear results
     $("#results").text("");
-    // REMOVE LOADING GIF
+    // Clear search bar
+    $("#search-input").val("");
+    // Remove loading gif
     $("#search-icon").html('<i class="fas fa-search"></i>');
     var data = respond.result;
     // DISPLAY THE RESULTS
-
-    // LOOP THROUGH THE RESULTS
+    // LOoop through result obj
     for (var i = 0; i < data.length; i++) {
       // Create new tile
       var newTile = $("<div>");
