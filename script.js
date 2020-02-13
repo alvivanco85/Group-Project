@@ -40,6 +40,7 @@ function search() {
     url: queryURL,
     method: "GET"
   }).then(function(respond) {
+    $("#results").show();
     console.log(respond);
     // CLEAR RESULTS
     $("#results").text("");
