@@ -17,20 +17,15 @@ $("#searchBtn").on("click", function () {
     $(".album").text(data.result.album);
 
 
-        $("#result-cont").show();
+        $("#results").show();
         $("#songTitle").show();
         $("#albumCover").show();
         $("#lyrics").show();
     */
 
-
-
-
 });
 $("#logo").on("click", function () {
     console.log("logo click");
-
-    alert(searchInput);
 });
 
 function search() {
@@ -40,6 +35,7 @@ function search() {
   var searchInput = $("#search-input").val();
   // GET RESULTS WITH API
   var queryURL = "https://api.audd.io/findLyrics/?q=" + searchInput + "&api_token=aac442290d3b6228e5387dc8352ecb4e";
+
   $.ajax({
     url: queryURL,
     method: "GET"
@@ -47,11 +43,19 @@ function search() {
     console.log(respond);
     // REMOVE LOADING GIF
     $("#search-icon").html('<i class="fas fa-search"></i>');
-    var result = respond.result;
+    var results = respond.result;
     // DISPLAY THE RESULTS
-    for (var i = 0; i < result.length; i++) {
-      $("#result").append()
-      result[i]
+
+    // LOOP THROUGH THE RESULTS
+    for (var i = 0; i < results.length; i++) {
+      // Create new tile
+      var newTile = $("<div>");
+      newTile.attr("class","box results");
+      // Append title onto the tile
+      newTile.append(results[i].full_title);
+      // Append artists onto the tile
+      newTile.append(results[i].artists)
+      $("#results").append(newTile);
     }
   });
 
