@@ -21,7 +21,7 @@
     <div class="level-item">
       <div class="field">
         <div class="control has-icons-left">
-          <input class="input is-large" style="width: 300px; font-size: 17px"  type="text" placeholder="Search for lyrics, songs, artist...">
+          <input id="search-input" class="input is-large" style="width: 300px; font-size: 17px"  type="text" placeholder="Search for lyrics, songs, artist...">
           <span class="icon is-small is-left" style="height: 45px; width: 45px">
             <i class="fas fa-search"></i>
           </span>
@@ -38,24 +38,40 @@
   </nav>
 
   <nav class="container">
+    <div class="tile is-ancestor">
+      <!-- RESULT CONTENT -->
+      <div class="tile is-12 is-parent">
+        <div class="tile is-child box hide" id="lyrics" style="white-space: pre-line">
+          <p class="title">Results</p><hr>
+        </div>
+      </div>
+    </div>
+
     <div class="tile is-ancestor hide">
-    <div class="tile is-4 is-vertical is-parent hide">
-      <div class="tile is-child box hide" id="songTitle">
-        <p class="title">Song, Artist, Album</p>
-        <p>Song Title, Artist and Album Name</p>
+      <!-- LEFT PANELS -->
+      <div class="tile is-4 is-vertical is-parent hide">
+        <div class="tile is-child box hide" id="songTitle">
+          <p class="title"></p>
+          <hr>
+          <u>Artist(s):</u> <p class="artist"></p>
+          <u>Album:</u> <p class="album"></p>
+        </div>
+        <div class="tile is-child box hide" id="albumCover">
+          <p class="title">Album Cover</p>
+          <p>Image will go</p>
+        </div>
       </div>
-      <div class="tile is-child box hide" id="albumCover">
-        <p class="title">Album Cover</p>
-        <p>Image will go</p>
+      <!-- LYRICS -->
+      <div class="tile is-parent">
+        <div class="tile is-child box hide" id="lyrics" style="white-space: pre-line">
+          <p class="title">Lyrics</p>
+        </div>
       </div>
-    </div>
-    <div class="tile is-parent">
-      <div class="tile is-child box hide" id="lyrics" style="white-space: pre-line">
-        <p class="title">Lyrics</p>
-      </div>
-    </div>
+
   </div>
+
+
   </nav>
-  <Script src="script.js"> </Script>
+  <script src="script.js"> </script>
   </body>
 </html>

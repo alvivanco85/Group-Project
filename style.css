@@ -6,3 +6,7 @@ html {
 #logo {
   padding-top: 50px;
 }
+
+#result-con, #songTitle, #albumCover, #lyrics {
+  display: show;
+}
