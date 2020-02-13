@@ -41,20 +41,23 @@ function search() {
     method: "GET"
   }).then(function(respond) {
     console.log(respond);
+    // CLEAR RESULTS
+    $("#results").text("");
     // REMOVE LOADING GIF
     $("#search-icon").html('<i class="fas fa-search"></i>');
-    var results = respond.result;
+    var data = respond.result;
     // DISPLAY THE RESULTS
 
     // LOOP THROUGH THE RESULTS
-    for (var i = 0; i < results.length; i++) {
+    for (var i = 0; i < data.length; i++) {
       // Create new tile
       var newTile = $("<div>");
       newTile.attr("class","box results");
+      console.log(data[i]);
       // Append title onto the tile
-      newTile.append(results[i].full_title);
+      newTile.append('<strong>' + data[i].full_title + '</strong><br>');
       // Append artists onto the tile
-      newTile.append(results[i].artists)
+      newTile.append(data[i].artist);
       $("#results").append(newTile);
     }
   });
