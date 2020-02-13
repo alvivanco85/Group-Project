@@ -34,9 +34,10 @@ $("#logo").on("click", function () {
 });
 
 function search() {
+  // LOADING GIF WHILE SEARCHING
+  $("#search-icon").html('<i class="fas fa-spinner fa-spin"></i>');
   // SEARCH INPUT BY USER
   var searchInput = $("#search-input").val();
-
   // GET RESULTS WITH API
   var queryURL = "https://api.audd.io/findLyrics/?q=" + searchInput + "&api_token=aac442290d3b6228e5387dc8352ecb4e";
   $.ajax({
@@ -44,6 +45,15 @@ function search() {
     method: "GET"
   }).then(function(respond) {
     console.log(respond);
-    var result = respond.data;
+    // REMOVE LOADING GIF
+    $("#search-icon").html('<i class="fas fa-search"></i>');
+    var result = respond.result;
+    // DISPLAY THE RESULTS
+    for (var i = 0; i < result.length; i++) {
+      $("#result").append()
+      result[i]
+    }
   });
+
+
 }

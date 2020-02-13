@@ -7,6 +7,6 @@ html {
   padding-top: 50px;
 }
 
-#result-con, #songTitle, #albumCover, #lyrics {
+#results, #songTitle, #albumCover, #lyrics {
   display: show;
 }

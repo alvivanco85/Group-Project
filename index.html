@@ -22,7 +22,7 @@
       <div class="field">
         <div class="control has-icons-left">
           <input id="search-input" class="input is-large" style="width: 300px; font-size: 17px"  type="text" placeholder="Search for lyrics, songs, artist...">
-          <span class="icon is-small is-left" style="height: 45px; width: 45px">
+          <span id="search-icon" class="icon is-small is-left" style="height: 45px; width: 45px">
             <i class="fas fa-search"></i>
           </span>
         </div>
@@ -39,9 +39,9 @@
 
   <nav class="container">
     <div class="tile is-ancestor">
-      <!-- RESULT CONTENT -->
+      <!-- RESULTS -->
       <div class="tile is-12 is-parent">
-        <div class="tile is-child box hide" id="lyrics" style="white-space: pre-line">
+        <div class="tile is-child box hide" id="results" style="white-space: pre-line">
           <p class="title">Results</p><hr>
         </div>
       </div>
