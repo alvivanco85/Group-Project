@@ -34,9 +34,12 @@ function displaySong(id) {
       }, );
       // Set title
       $(".name").text(data[i].title);
+      // Set artist
       $(".artist").html("<u>Artist(s) :</u> " + data[i].artist);
+      // Set album (if availabel)
       if (data[i].album)
         $(".album").html("<u>Album :</u> " + data[i].album);
+      // Set lyrics
       $("#lyrics").text(data[i].lyrics);
 
       // Show youtube button on media tile
