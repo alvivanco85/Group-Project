@@ -2,29 +2,65 @@
 <html>
 
 <head>
-    <title>Muse Song Search</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/uikit.min.css" />
-    <link rel="stylesheet" href="css/style.css">
-    <!-- SCRIPT -->
-    <script src="js/uikit.min.js"></script>
-    <script src="js/uikit-icons.min.js"></script>
+    <title>Hello Muse!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/script.js"></script>
 </head>
 
 <body>
-    <img src="images/muselogo2.png" width="250px" height="200px" alt="muse logo" id="logo">
-    <div class="uk-container uk-margin-top"></div>
-    <form class="uk-search uk-search-large uk-position-center">
-        <span uk-icon="icon: search; ratio: 2"></span>
-        <input class="uk-search-input" type="search" id="userInput" placeholder="Search for lyrics, songs, artist...">
-        <button class="uk-button uk-button-default uk-button-primary uk-position-center" id="search">SEARCH</button>
-    </form>
-
+    <nav class="level">
+        <div class="level-item has-text-centered">
+            <div>
+                <img name="museBtn" src="muselogo2.png" width="200" height="200" alt="muse logo" id="logo">
+            </div>
+        </div>
+    </nav>
+    <nav class="level">
+        <div class="level-item">
+            <div class="field">
+                <div class="control has-icons-left">
+                    <input class="input is-large" style="width: 300px; font-size: 17px" type="text"
+                        placeholder="Search for lyrics, songs, artist...">
+                    <span class="icon is-small is-left" style="height: 45px; width: 45px">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="level">
+        <div class="level-item">
+            <div class="buttons">
+                <button class="button is-primary" id="searchBtn">Search</button>
+            </div>
+        </div>
+    </nav>
+    <div class="tile is-ancestor hide" id="result-cont">
+        <div class="tile is-4 is-vertical is-parent hide">
+            <div class="tile is-child box hide" id="songTitle">
+                <p class="title">Song, Artist, Album</p>
+                <p>Song Title, Artist and Album Name</p>
+            </div>
+            <div class="tile is-child box hide" id="albumCover">
+                <p class="title">Album Cover</p>
+                <p>Image will go</p>
+            </div>
+        </div>
+        <div class="tile is-parent">
+            <div class="tile is-child box hide" id="lyrics">
+                <p class="title">Lyrics</p>
+                <p>Dum, de dum, de dum dum dum dum de de de. Dum, de dum, de dum dum dum dum de de de</p>
+                <p>Dum, de dum, de dum dum dum dum de de de. Dum, de dum, de dum dum dum dum de de de. Dum, de dum, de
+                    dum dum dum dum de de de</p>
+                <p>Dum, de dum, de dum dum dum dum de de de. Dum, de dum, de dum dum dum dum de de de</p>
+            </div>
+        </div>
     </div>
+    <Script src="script.js"> </Script>
 </body>
 
 </html>
