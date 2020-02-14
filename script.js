@@ -22,26 +22,37 @@ function displaySong(id) {
   // Loop through results obj for the song id
   for (var i = 0; i < data.length; i++) {
     if (data[i].song_id == id) {
-      // Hide results tile
-      $("#results").hide();
-      // Set title
-      $(".name").text(data[i].full_title);
-      $(".artist").html("<u>Artist(s) :</u> " + data[i].artist);
-      if (data[i].album)
-        $(".album").html("<u>Album :</u> " + data[i].album);
-      $("#lyrics").text(data[i].lyrics);
       // Show song info tiles
       $("#songTitle").show();
       $("#media").show();
       $("#lyrics").show();
+      // Scroll down to lyric
+      var offset = $("#lyrics").offset();
+      $("html, body").animate({
+          scrollTop: offset.top,
+          scrollLeft: offset.left
+      }, );
+      // Set title
+      $(".name").text(data[i].title);
+      $(".artist").html("<u>Artist(s) :</u> " + data[i].artist);
+      if (data[i].album)
+        $(".album").html("<u>Album :</u> " + data[i].album);
+      $("#lyrics").text(data[i].lyrics);
+
       // Show youtube button on media tile
       // Show spotify button on media tile
       // Parse JSON into song
       var song = JSON.parse(data[i].media);
-      console.log(song);
-      $("#youtube").attr("href",song[2].url);
-      $("#spotify").attr("href",song[0].url);
-      $("#soundcloud").attr("href",song[1].url);
+      //console.log(song);
+      // Load meida URL to buttons
+      for (var i = 0; i < song.length; i++) {
+        if (song[i].provider == "youtube")
+          $("#youtube").attr("href",song[i].url);
+        else if (song[i].provider == "spotify")
+          $("#spotify").attr("href",song[i].url);
+        else if (song[i].provider == "soundcloud")
+          $("#soundcloud").attr("href",song[i].url);
+      }
       break;
     }
   }
