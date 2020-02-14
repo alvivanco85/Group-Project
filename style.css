@@ -8,7 +8,7 @@ html {
   padding-top: 50px;
 }
 
-#results, #songTitle, #albumCover, #lyrics, .notification {
+#results, #songTitle, #media, #lyrics, .notification {
   display: none;
 }
 
