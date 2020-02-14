@@ -27,7 +27,7 @@ function displaySong(id) {
       $("#media").show();
       $("#lyrics").show();
       // Scroll down to lyric
-      var offset = $("#lyrics").offset();
+      var offset = $("#songTitle").offset();
       $("html, body").animate({
           scrollTop: offset.top,
           scrollLeft: offset.left
