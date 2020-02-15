@@ -1,0 +1,26 @@
+html {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRP0JUcgRRrTBSlmL3F117PkDdoFBTw4Wq3a9WC5foo8APl16Ex");
+  background-repeat: repeat-y repeat-x;
+}
+
+#logo {
+  padding-top: 50px;
+}
+
+#results, #songTitle, #albumCover, #lyrics {
+  display: none;
+}
+
+.results {
+  background-color: #55b8bb;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.results:hover {
+  background-color: cadetblue;
+}
+
+strong {
+  color: white;
+}
