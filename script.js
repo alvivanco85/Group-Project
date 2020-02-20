@@ -75,7 +75,7 @@ function search() {
     return
   }
   // Get results from API
-  var api_token = "9146c1b62954f6de8a60955bbbf59323";
+  var api_token = "74e3e2d878b8514bddd760ed9894ec1d";
   var queryURL = "https://api.audd.io/findLyrics/?q=" + searchInput + "&api_token=" + api_token;
 
   $.ajax({
